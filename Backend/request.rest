@@ -1,0 +1,127 @@
+//Create User
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "akhzamP",
+    "email": "user@gmail.com",
+    "password": "1234",
+    "confPassword": "1234",
+    "role": "user"
+}
+
+###
+//Get All User
+GET http://localhost:3001/users
+
+
+###
+//Get Single User
+GET http://localhost:3001/users/0ab92d9f-576b-4d77-ad44-15de00a9165c
+
+###
+//update user
+PATCH  http://localhost:3001/users/5c2cbb23-52de-48b2-894a-90334fe46a92
+Content-Type: application/json
+
+{
+    "name": "akhzam",
+    "email": "user@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//delete user
+DELETE  http://localhost:3001/users/000140fb-86c9-43c9-b53b-4b21db4b73d1
+
+###
+//Login Admin
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "1234"
+}
+
+
+###
+//Login User
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "1234"
+}
+
+
+###
+//Me
+GET  http://localhost:3001/me
+
+
+###
+//logout  User
+DELETE http://localhost:3001/logout
+Content-Type: application/json
+
+{
+
+    "email": "admin@gmail.com",
+    "password": "1234"
+}
+
+
+###
+//Get All Kost
+GET http://localhost:3001/kost
+
+
+###
+//Get Single Kost
+GET http://localhost:3001/kost/08c70f29-5c8b-4a86-bbcf-f31ec7286046
+
+
+###
+//Post Kost
+POST http://localhost:3001/kost
+Content-Type: application/json
+
+{
+    "nama" : "Kost Barokah",
+    "detail" : "Kost barokah jalan pemuda Lombok Timur",
+    "Ketersediaan": "Penuh",
+    "Kategori": "Standard",
+    "Lokasi": "Jalan Pemuda No. 37",
+    "FasilitasU": "WiFi, Parkir",
+    "telepon": "08123456789",
+    "harga": "500000",
+    "sk1": "Kebersihan",
+    "sk2": "Keamanan",
+    "sk3": "Pelayanan",
+    "fk1": "Kamar Mandi Dalam",
+    "fk2": "Tempat Tidur",
+    "fk3": "AC",
+    "fk4": "TV",
+    "fk5": "Meja dan Kursi",
+    "fk6": "Internet",
+    "fk7": "Lemari",
+    "fkm1": "Dapur Bersama",
+    "fkm2": "Mesin Cuci",
+    "fkm3": "Ruang Tamu",
+    "fkm4": "Ruang Makan",
+    "fkm5": "Parkir Mobil",
+    "fu1": "WiFi",
+    "fu2": "Parkir",
+    "fu3": "Kebersihan Harian",
+    "fu4": "Keamanan 24 Jam",
+    "fu5": "Air Panas",
+    "pk1": "Mall",
+    "pk2": "Stasiun",
+    "pk3": "Rumah Sakit",
+    "pk4": "Kampus",
+    "maps": "https://maps.google.com"
+}
